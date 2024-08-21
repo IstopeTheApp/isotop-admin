@@ -43,4 +43,4 @@ export interface user_state {
   value: number;
 }
 
-export type {profiles}
+export type {profiles, status}
