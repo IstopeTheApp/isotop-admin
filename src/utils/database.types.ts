@@ -36,3 +36,11 @@ export interface Database {
     };
   };
 }
+
+// Define the user_state interface
+export interface user_state {
+  name: string;
+  value: number;
+}
+
+export type {profiles}
