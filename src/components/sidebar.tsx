@@ -18,7 +18,8 @@ const Sidebar = () => {
     { href: '/disputes', icon: FaRegStickyNote, name: 'Disputes' },
     { href: '/notify', icon: BiBell, name: 'Push notification' },
     { href: '/gifs', icon:RxUpload, name: 'Upload Gifs'},
-    { href: '/setting', icon: FiSettings, name: 'Admin settings' }
+    { href: '/setting', icon: FiSettings, name: 'Admin settings' },
+    { href: '/verifymanagement', icon: FiSettings, name: 'Verify Users' }
   ])
 
   return (

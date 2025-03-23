@@ -16,6 +16,10 @@ export const filterOptions = {
     { name: "Woman", code: "Woman" },
     { name: "Nonbinary", code: "Nonbinary" },
   ],
+  is_verified: [
+    {name:'Verified', code:true},
+    {name:'Unverified', code:false},
+  ]
 };
 
 export const bioFields = [
