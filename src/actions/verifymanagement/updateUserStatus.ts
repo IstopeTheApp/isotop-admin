@@ -2,7 +2,7 @@ import { calculateAge } from "@/utils/calculateAge";
 import { FilterUser } from "@/types/filter.type";
 import { userRes } from '@/types/users.type';
 
-async function updateUserStatus(val) {
+async function updateUserStatus(val:any) {
         const response = await fetch("/api/verifymanagement/update", {
             method: "POST",
             headers: {
