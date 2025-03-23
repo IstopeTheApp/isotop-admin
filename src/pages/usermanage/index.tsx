@@ -31,6 +31,7 @@ const Dashboard = () => {
     type: [],
     status: [],
     gender: [],
+    is_verified: [],
   });
 
   const getData = useCallback( async () => {

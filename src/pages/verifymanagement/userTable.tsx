@@ -27,13 +27,13 @@ const UserTable = ({ users, selectUser }: Users) => {
     const [datas, setDatas] = useState<users[]>([]);
     const [row, setRow] = useState<users | null>(null);
 
-    const [selectedImage, setSelectedImage] = useState(null);
+    const [selectedImage, setSelectedImage] = useState();
     const [displayDialog, setDisplayDialog] = useState(false);
     const [zoomLevel, setZoomLevel] = useState(1);
 
     useEffect(() => setDatas(users), [users]);
 
-    const handleImageClick = (image) => {
+    const handleImageClick = (image:any) => {
         setSelectedImage(image);
         setZoomLevel(1);
         setDisplayDialog(true);
@@ -50,7 +50,7 @@ const UserTable = ({ users, selectUser }: Users) => {
     ];
 
     // Handle action selection for a specific user
-    const handleActionChange = async (e, rowData) => {
+    const handleActionChange = async (e:any, rowData:any) => {
         const selectedAction = e.value;
         if (selectedAction==null) return;
 
@@ -74,7 +74,7 @@ const UserTable = ({ users, selectUser }: Users) => {
     };
 
     // Action dropdown template
-    const actionBodyTemplate = (rowData) => {
+    const actionBodyTemplate = (rowData:any) => {
 
         return (
             <Dropdown
@@ -87,7 +87,7 @@ const UserTable = ({ users, selectUser }: Users) => {
         );
     };
 
-    const imageBodyTemplate = (rowData) => {
+    const imageBodyTemplate = (rowData:any) => {
         return (
             <img
                 src={rowData.selfie}
@@ -103,7 +103,7 @@ const UserTable = ({ users, selectUser }: Users) => {
         );
     };
 
-    const checkStatus = (rowData)=>{
+    const checkStatus = (rowData:any)=>{
         return (
             <span>{rowData.is_verified==true?'Verified':'Unverified'}</span>
         );
